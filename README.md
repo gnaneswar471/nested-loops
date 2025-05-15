@@ -212,3 +212,12 @@ enter the size of n 4
 4 5 6 
 7 8 9 10 
 
+n=int(input())
+for i in range(1,n+1):
+    print(' '*(n-i)+'*'*(2*i-1))
+ 5
+    *
+   ***
+  *****
+ *******
+*********
