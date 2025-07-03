@@ -9,7 +9,7 @@ enter the size of n 4
 ^ ^ ^ ^ 
 ^ ^ ^ ^ 
 ^ ^ ^ ^ 
-^ ^ ^ ^ 
+^ ^ ^ ^
 
 n=int(input("enter the size of n"))
 for i in range(n):
