@@ -120,7 +120,7 @@ enter the size of n 7
   *       *   
 * * * * * * *
 
- n=int(input("enter the size of n"))
+n=int(input("enter the size of n"))
 for i in range(5):
     for n in range(n):
         print('*',end=' ')
@@ -132,7 +132,7 @@ enter the size of n 5
 * * 
 *
 
- n=int(input("enter the size of n"))
+n=int(input("enter the size of n"))
 for i in range(1, 2*n):
     s=i if i<n else 2*n-i
     for j in range(s):
