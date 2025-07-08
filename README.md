@@ -257,3 +257,27 @@ Enter the size 6
  18  31  36  35  26   9 
  17  30  29  28  27  10 
  16  15  14  13  12  11 
+
+n=int(input("Enter the size"))
+matrix=[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]]
+rows=len(matrix)
+cols=len(matrix[0])
+top,left=0,0
+right,bottom=cols-1,rows-1
+num=1
+while top<=bottom and left<=right:
+    for i in range(left,right+1):
+        print(matrix[top][i],end=" ")
+    top+=1
+    for i in range(top,bottom+1):
+        print(matrix[i][right],end=" ")
+    right-=1
+    for i in range(right,left-1,-1):
+        print(matrix[bottom][i],end=" ")
+    bottom-=1
+    for i in range(bottom,top-1,-1):
+        print(matrix[i][left],end=" ")
+    left+=1
+OUTPUT:
+Enter the size 5
+1 2 3 4 5 10 15 20 25 24 23 22 21 16 11 6 7 8 9 14 19 18 17 12 13 
