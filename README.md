@@ -281,3 +281,37 @@ while top<=bottom and left<=right:
 OUTPUT:
 Enter the size 5
 1 2 3 4 5 10 15 20 25 24 23 22 21 16 11 6 7 8 9 14 19 18 17 12 13 
+
+n=int(input("Enter the size"))
+matrix=[[0]*n for _ in range(n)]
+top,left=0,0
+right,bottom=n-1,n-1
+num=ord('A')
+while top<=bottom and left<=right:
+    for i in range(left,right+1):
+        matrix[top][i]=chr(num)
+        num+=1
+    top+=1
+    for i in range(top,bottom+1):
+        matrix[i][right]=chr(num)
+        num+=1
+    right-=1
+    for i in range(right,left-1,-1):
+        matrix[bottom][i]=chr(num)
+        num+=1 
+    bottom-=1
+    for i in range(bottom,top-1,-1):
+        matrix[i][left]=chr(num)
+        num+=1
+    left+=1
+for row in matrix:
+    for val in row:
+        print(f"{val:3}",end=" ")
+    print()
+OUTPUT:
+Enter the size 5
+A   B   C   D   E   
+P   Q   R   S   F   
+O   X   Y   T   G   
+N   W   V   U   H   
+M   L   K   J   I   
